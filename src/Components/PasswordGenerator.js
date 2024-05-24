@@ -9,7 +9,7 @@ import SliderComponent from "./Slider";
 const lowercaseList = "abcdefghijklmnopqrstuvwxyz";
 const uppercaseList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numberList = "0123456789";
-const symbolsList = "!@#$%^&*()?";
+const symbolsList = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
 export default function PasswordGenerator() {
   const [password, setPassword] = useState("");
@@ -83,7 +83,6 @@ export default function PasswordGenerator() {
           setPasswordLength={setPasswordLength}
         />
 
-
         <Checkbox
           upperCase={upperCase}
           setUpperCase={setUpperCase}
@@ -100,18 +99,7 @@ export default function PasswordGenerator() {
         <div className="generatePassword">
           <button type="button" onClick={generatePassword}>
             GENERATE
-            {/* <img src={arrowRight} className="arrow-right" alt="arrow-right"/> */}
-            <svg
-              className="arrow-right"
-              width="12"
-              height="12"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill="#24232C"
-                d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
-              />
-            </svg>
+            <img src={arrowRight} className="arrow-right" alt="arrow-right" />
           </button>
         </div>
       </div>
